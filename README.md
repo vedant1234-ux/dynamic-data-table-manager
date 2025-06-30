@@ -154,20 +154,5 @@ vercel
 
 ---
 
-> Created with 💻 by [Your Name] – Contributions welcome!
+> Created with 💻 by [VEDANT VALMIK WARGHADE] – Contributions welcome!
 
----
-
-### 🚀 Next Steps
-
-- Save this file as `README.md` in your project root
-- Replace `"your-username"` and `[Your Name]` with your actual GitHub username and name
-- Add screenshots to `/screenshots` as referenced above
-
-**Want more?**  
-I can generate:
-- `vercel.json` for deployment
-- GitHub issue/PR templates
-- Badges for coverage, deploy status, etc.
-
-Let me know if you want these extras or further tweaks!

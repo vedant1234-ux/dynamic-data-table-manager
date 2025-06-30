@@ -133,15 +133,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🌐 Deployment
-
-Deploy instantly using **[Vercel](https://vercel.com/)**.
-
-```bash
-vercel
-```
-
-> You can also include a `vercel.json` file for advanced routing and settings.
+🔗 Live Demo:
+https://dynamic-data-table-manager-iota.vercel.app
 
 ---
 

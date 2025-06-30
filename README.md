@@ -6,124 +6,73 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A **feature-rich, customizable data table manager** built with **Next.js**, **Redux Toolkit**, **Material UI**, and **TypeScript**. Designed for modern applications that require flexible and interactive data tables with powerful features like dynamic columns, inline editing, CSV import/export, and dark mode theming.
+A modern, extensible **Data Table Manager** built with **Next.js**, **Redux Toolkit**, **Material UI**, and **TypeScript**. Designed for real-world applications that need advanced, interactive data tables with inline editing, dynamic columns, CSV import/export, and theming.
 
 ---
 
-## 📍 Project Objective
+## 📑 Table of Contents
 
-This frontend task demonstrates your ability to:
-
-* Work with **dynamic UIs**
-* Manage **complex state** using Redux Toolkit
-* Implement **real-world features** like:
-
-  * CSV import/export
-  * Column manipulation
-  * Sorting, searching, pagination
-  * Inline editing and responsive UI
+- [Objective](#objective)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Quickstart](#quickstart)
+- [Folder Structure](#folder-structure)
+- [Screenshots](#screenshots)
+- [Customization](#customization)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+- [Deployment](#deployment)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
-## ✨ Core Features
+## 🎯 Objective
 
-### 📊 Table View
+Showcase modern frontend skills with a robust, scalable, and interactive data table manager. Demonstrates dynamic UIs, complex state management, and real-world feature implementation.
 
-* Display a data table with default fields: `Name`, `Email`, `Age`, `Role`
-* Column sorting with ASC/DESC toggling
-* Global search that filters all fields
-* Client-side pagination (10 rows per page)
+---
 
-### 🧱 Dynamic Columns
+## ✨ Features
 
-* Manage Columns modal:
-
-  * Add new fields (e.g., Department, Location)
-  * Show/hide columns using checkboxes
-  * Drag-and-drop to reorder columns
-* Persist settings in `localStorage` or via `Redux Persist`
-
-### 📁 Import & Export
-
-* **Import from CSV**:
-
-  * Upload, parse using PapaParse
-  * Validate format and highlight errors
-
-* **Export to CSV**:
-
-  * Export current view
-  * Only includes visible columns
-
-### 🎁 Bonus Features
-
-* 🔄 **Inline Row Editing**:
-
-  * Double-click to edit fields inline
-  * Validate inputs (e.g., age must be a number)
-  * "Save All" and "Cancel All" buttons
-
-* 🗑️ **Row Actions**:
-
-  * Edit or Delete rows with confirmation dialogs
-
-* 🌗 **Theme Toggle**:
-
-  * Light/Dark mode using MUI's theming
-
-* 📱 **Responsive Design**:
-
-  * Mobile-friendly, modern UI
+- **Table View:** Sortable, searchable, paginated table (`Name`, `Email`, `Age`, `Role`)
+- **Dynamic Columns:** Add/remove, show/hide, drag-and-drop reorder, persistent settings
+- **CSV Import/Export:** Validate and parse CSV (PapaParse), export filtered/visible data (FileSaver.js)
+- **Inline Editing:** Double-click to edit, field validation, save/cancel all
+- **Row Actions:** Edit/Delete with confirmation
+- **Theme Toggle:** Light/Dark mode (MUI)
+- **Responsive UI:** Mobile-first, modern layout
 
 ---
 
 ## 🛠 Tech Stack
 
-* **React 18 / Next.js 14** (App Router)
-* **Redux Toolkit** for global state
-* **Material UI v5+** for UI components and theming
-* **TypeScript** for static typing
-* **React Hook Form** for column and row input handling
-* **PapaParse** for CSV parsing
-* **FileSaver.js** for CSV export
-* **localStorage / Redux Persist** for preference persistence
+| Technology        | Purpose                        |
+|-------------------|-------------------------------|
+| Next.js 14        | App routing and structure      |
+| React 18          | Component-based frontend       |
+| Redux Toolkit     | Global state management        |
+| TypeScript        | Type safety and code quality   |
+| Material UI v5+   | UI components and styling      |
+| React Hook Form   | Form handling and validation   |
+| PapaParse         | CSV import parsing             |
+| FileSaver.js      | CSV download/export            |
 
 ---
 
-## 🚦 Getting Started
-
-### 1. Install Dependencies
+## ⚡ Quickstart
 
 ```bash
+# Clone and install
+git clone https://github.com/your-username/dynamic-data-table-manager.git
+cd dynamic-data-table-manager
 npm install
-# or
-yarn install
-```
 
-### 2. Start Development Server
-
-```bash
+# Start development server
 npm run dev
-# or
-yarn dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to view the app.
-
----
-
-## 📸 Screenshots
-
-> *Add screenshots in `/screenshots` to showcase your features.*
-
-* 📊 Table View
-  ![Table View](./screenshots/table-view.png)
-
-* 🔧 Column Management
-  ![Column Management](./screenshots/column-management.png)
-
-* 🌙 Dark Mode
-  ![Dark Mode](./screenshots/dark-mode.png)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
@@ -131,28 +80,50 @@ Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
 ```
 src/
-├── app/           # Next.js App Router entrypoint and layout
-├── components/    # Reusable components (DataTable, Toolbar, Modals, etc.)
-├── store/         # Redux slices and store config
-├── types/         # Shared TypeScript interfaces and types
-├── utils/         # Helper functions (CSV parsing, validation, etc.)
+├── app/           # Next.js App Router pages and layout
+├── components/    # UI components (Table, Modal, Toolbar, etc.)
+├── store/         # Redux slices and configuration
+├── types/         # TypeScript interfaces and types
+├── utils/         # Utility functions (CSV parsing, validation, etc.)
 ```
 
 ---
 
-## 🧩 Customization Tips
+## 📸 Screenshots
 
-* 💡 **Add new column types** – Extend `ColumnConfig` and enhance `EditableCell`
-* 🎨 **Customize theme** – Update MUI theme inside `ThemeProvider`
-* 🚀 **Add features** – Redux makes scaling features and state easy
+> Place screenshots inside the `/screenshots` folder.
+
+| View                                            | Description                   |
+|-------------------------------------------------|-------------------------------|
+| ![Table](./screenshots/table-view.png)          | 📊 Table with sorting, search |
+| ![Columns](./screenshots/column-management.png) | 🔧 Manage Columns Modal       |
+| ![Dark](./screenshots/dark-mode.png)            | 🌙 Dark Mode                  |
+
+---
+
+## 🧩 Customization
+
+- **Add new column types:** Extend `ColumnConfig` and update `EditableCell.tsx`
+- **Change theme:** Edit `ThemeProvider.tsx`
+- **Expand features:** Add slices or components modularly with Redux Toolkit
+
+---
+
+## 🧪 Testing
+
+- [Jest](https://jestjs.io/) for unit tests
+- [React Testing Library](https://testing-library.com/) for component tests
+- [Cypress](https://www.cypress.io/) for end-to-end
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions!
-Feel free to open an issue for feature requests or bugs.
-Make pull requests clean and document your code.
+We welcome contributions!  
+1. Fork the repo  
+2. Create a new branch  
+3. Commit your changes with clear messages  
+4. Submit a PR with documentation
 
 ---
 
@@ -162,20 +133,41 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-> Made with ❤️ using Next.js, Redux Toolkit, Material UI, and TypeScript.
+## 🌐 Deployment
+
+Deploy instantly using **[Vercel](https://vercel.com/)**.
+
+```bash
+vercel
+```
+
+> You can also include a `vercel.json` file for advanced routing and settings.
 
 ---
 
-## 🚀 What's Next?
+## ❤️ Acknowledgements
 
-If you need help with:
-
-* Generating production-ready screenshots
-* Writing GitHub issues or pull request templates
-* Deploying this project to **Vercel** (`vercel.json` support)
-
-Let me know — I'd be happy to help you finalize everything!
+- Built with [Next.js](https://nextjs.org/)
+- UI powered by [Material UI](https://mui.com/)
+- State managed with [Redux Toolkit](https://redux-toolkit.js.org/)
+- CSV handled via [PapaParse](https://www.papaparse.com/)
 
 ---
 
-Let me know if you'd like me to turn this into a downloadable `README.md` file or help you add a `vercel.json`, `.env.example`, or GitHub templates (`CONTRIBUTING.md`, `ISSUE_TEMPLATE`, etc.) for completeness.
+> Created with 💻 by [Your Name] – Contributions welcome!
+
+---
+
+### 🚀 Next Steps
+
+- Save this file as `README.md` in your project root
+- Replace `"your-username"` and `[Your Name]` with your actual GitHub username and name
+- Add screenshots to `/screenshots` as referenced above
+
+**Want more?**  
+I can generate:
+- `vercel.json` for deployment
+- GitHub issue/PR templates
+- Badges for coverage, deploy status, etc.
+
+Let me know if you want these extras or further tweaks!
